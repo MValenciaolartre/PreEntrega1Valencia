@@ -33,10 +33,11 @@ const ItemDetailContainer = ({}) => {
   <main className="flex flex-wrap justify-center gap-8">
      
          <div>
-      <div className="p-4 transition rounded-md shadow-md user-card hover:scale-105 group bg-slate-300 max-w-xs">
-      <div className="overflow-hidden aspect-video">
-                <img className="w-full  h-80 transition-all duration-500 rounded-md grayscale group-hover:grayscale-0 group-hover:scale-150" 
-                src={baseUrl+categorias.imagen} alt="card image" />
+          
+      <div className="p-2 transition rounded-md  user-card hover:scale-100 group bg-slate-300 max-w-xs">
+      <div className="overflow-hidden aspect-w-16 aspect-h-9"style={{height:"300px",width:"300px" }}>
+                <img className="w-full h-full object-cover transition-all duration-500 rounded-md  group-hover:grayscale-0 group-hover:scale-150" 
+                src={categorias.imagen} alt="card image" />
 
             </div>
             <h2 className="my-2 font-bold">{categorias.nombre}</h2>
