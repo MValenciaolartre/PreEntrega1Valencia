@@ -1,23 +1,27 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { Link } from "react-router-dom";
-import { getAllProducts } from "../utils/utils";
-
-
+import { getAllProducts,getProductByCategory } from "../utils/utils";
 const ItemListContainer = ({ greeting }) => {
   const params = useParams()
   const [productos, setProductos] = useState([])
   useEffect(() => {
     const fetchData = () => {
+      if (params.id) {
+        getProductByCategory(params.id)
+        .then((resultado)=>{
+          setProductos(resultado)
+        })
+    } 
+    else{
       getAllProducts()
       .then((resultado)=>{
-        console.log(resultado)
         setProductos(resultado)
       })
     }
 
+    }
     fetchData();
-    console.log(params.id)
 }, [params.id]);
   return (
   <main className="flex flex-wrap justify-center gap-8">

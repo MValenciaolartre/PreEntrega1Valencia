@@ -1,18 +1,8 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { Link } from "react-router-dom";
-import { app } from "../firebase";
-import { getFirestore , collection , getDocs } from "firebase/firestore";
-import { Import } from "lucide-react";
 import ItemDetail from "./ItemDetail";
 import { getProductDetail } from "../utils/utils";
-
-
-const db = getFirestore (app)
-
-const productsCollection = collection(db,"products")
-const query = getDocs(productsCollection)
-
 
 const ItemDetailContainer = ({}) => {
   const params = useParams()
