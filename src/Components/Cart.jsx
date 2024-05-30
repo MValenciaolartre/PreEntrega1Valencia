@@ -1,6 +1,6 @@
 import { toast } from "react-toastify"
-//import useCart from "../../hooks/useCart"
-//import { createSale } from "../../utils"
+import useCart from "../../hooks/useCart"
+import { createSale } from "../../utils"
 
 function Carrito() {
 

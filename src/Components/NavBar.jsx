@@ -1,9 +1,17 @@
-import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import CartWidget from "./CartWidget";
 import { Link } from "react-router-dom";
+import { useState, useEffect, useContext } from "react";
+import { contexto } from "../contexto";
 
-const NavBar = () => {
+const elValorDelContexto= useContext(contexto);
+console.log (elValorDelContexto);
+
+
+
+const NavBar = () => { 
+  
+
   const params = useParams()
   const [categorias, setCategorias] = useState([])
   

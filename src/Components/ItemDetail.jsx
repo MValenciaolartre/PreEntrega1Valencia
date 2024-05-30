@@ -1,5 +1,7 @@
-import { useContext } from "react"
+
 import Contador from './ItemCount'
+
+
 
 const ItemDetail = ({producto }) => {
     //const valorActual = useContext(contexto)

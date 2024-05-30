@@ -1,8 +1,51 @@
-# React + Vite
+# Tienda en Línea
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este es un proyecto de tienda en línea
 
-Currently, two official plugins are available:
+## Nombre
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Amalia Maida Valencia Olarte
+
+## Descripción del Proyecto
+
+Este proyecto es una tienda en línea pequeña que permite a los usuarios navegar y comprar productos de manera eficiente y segura. La aplicación incluye funcionalidades de autenticación, gestión de productos, carrito de compras y procesamiento de pedidos.
+
+## Tecnologías Utilizadas
+
+- **React**: Biblioteca de JavaScript para construir interfaces de usuario.
+- **Firebase**: Plataforma de desarrollo de aplicaciones de Google, utilizada para la autenticación, base de datos en tiempo real y hosting.
+- **Tailwind CSS**: Framework de CSS para un diseño rápido y personalizado.
+- **Vite**: Herramienta de construcción rápida para proyectos de frontend.
+
+## Funcionalidades
+
+- **Registro y Autenticación de Usuarios**
+  - Registro con correo electrónico y contraseña.
+  - Inicio de sesión y cierre de sesión.
+  - Recuperación de contraseña.
+
+- **Gestión de Productos**
+  - Visualización de productos disponibles.
+  - Filtro y búsqueda de productos por nombre y categoría.
+
+- **Carrito de Compras**
+  - Agregar productos al carrito.
+  - Ver y modificar el contenido del carrito.
+
+- **Procesamiento de Pedidos**
+  - Ingreso de información de envío y pago.
+  - Confirmación de pedidos y notificación por correo electrónico.
+
+## Instalación y Configuración
+
+### Prerrequisitos
+
+- Node.js
+- npm o yarn
+
+### Pasos para la Instalación
+
+1. Clona este repositorio:
+   ```bash
+   git clone https://github.com/tu-usuario/tu-repositorio.git
+   cd tu-repositorio

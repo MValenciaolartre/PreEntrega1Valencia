@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { Link } from "react-router-dom";
 import { getAllProducts,getProductByCategory } from "../utils/utils";
+
 const ItemListContainer = ({ greeting }) => {
   const params = useParams()
   const [productos, setProductos] = useState([])
