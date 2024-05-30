@@ -1,10 +1,19 @@
-import React from 'react'
+import { useContext } from "react"
+import Contador from './ItemCount'
+
+const ItemDetail = ({producto }) => {
+    //const valorActual = useContext(contexto)
+
+    const handleConfirm = (numero) => {
+     //   valorActual.agregarAlCarrito(numero, productO)
+    }
 
 
-const ItemDetail = ({}) => {
     return (
         <div>
-            este es mi detalle 
+             <h2 className="my-2 font-bold">{"Detalles: "+ producto.detalles}</h2>
+             <Contador product={producto} handleConfirm={handleConfirm}/>
+            
         </div>
     )
 

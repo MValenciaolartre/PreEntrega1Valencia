@@ -1,10 +1,13 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState, useContext } from "react"
 import { useParams } from "react-router-dom"
 import { Link } from "react-router-dom";
 import ItemDetail from "./ItemDetail";
 import { getProductDetail } from "../utils/utils";
 
+
 const ItemDetailContainer = ({}) => {
+
+
   const params = useParams()
   const [producto, setProducto] = useState([])
    useEffect(() => {
@@ -31,7 +34,8 @@ const ItemDetailContainer = ({}) => {
             <h2 className="my-2 font-bold">{producto.nombre}</h2>
             <h2 className="my-2 font-bold">{"Precio: "+ producto.precio}</h2>
             <h2 className="my-2 font-bold">{"Categoria: "+ producto.categoria}</h2>
-            <ItemDetail></ItemDetail>
+            <ItemDetail producto= {producto}  ></ItemDetail>
+            
             <Link to={`/`}>volver</Link>
       </div>
       <div className="container mx-auto h-40 mt-3">
