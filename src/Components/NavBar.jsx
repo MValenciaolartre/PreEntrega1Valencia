@@ -4,13 +4,9 @@ import { Link } from "react-router-dom";
 import { useState, useEffect, useContext } from "react";
 import { contexto } from "../contexto";
 
-const elValorDelContexto= useContext(contexto);
-console.log (elValorDelContexto);
-
-
-
 const NavBar = () => { 
-  
+  const elValorDelContexto = useContext(contexto);  // Correct use of useContext
+  console.log(elValorDelContexto);
 
   const params = useParams()
   const [categorias, setCategorias] = useState([])
@@ -51,7 +47,7 @@ const NavBar = () => {
                    <Link key={categoria.nombre} className="hover:bg-gray-700 p-2 rounded px-3 py-2 rounded-md bg-sky-500 text-white cursor-pointer" to={`/category/${categoria.nombre}`}>{categoria.nombre}</Link>
                     ))}
               
-              <CartWidget total={777} link={'#'}/>
+              <CartWidget total={elValorDelContexto.carrito} link={'#'}/>
               </div>
             </div>
           </div>

@@ -1,16 +1,17 @@
 import { createContext, useState } from "react";
 
-const contexto = createContext();
+const contexto = createContext();  // Create context
 const Provider = contexto.Provider;
 
-function CarritoProvider (props){
+function CarritoProvider(props) {
+    const [cantCarrito, setCantCarrito] = useState(0);
 
-const [cantCarrito, setCantCarrito]= useState(0)
-
-     return(
-<Provider value={{carrito: cantCarrito} }>
-{props.children}
-</Provider>
-     )
+    return (
+        <Provider value={{ carrito: cantCarrito }}>
+            {props.children}
+        </Provider>
+    );
 }
-export default  CarritoProvider
+
+export { contexto };  // Named export for contexto
+export default CarritoProvider;  // Default export for CarritoProvider
