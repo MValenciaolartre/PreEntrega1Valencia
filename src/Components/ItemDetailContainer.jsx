@@ -18,39 +18,11 @@ const ItemDetailContainer = ({}) => {
   const params = useParams()
   const [producto, setProducto] = useState([])
    useEffect(() => {
-    const fetchData = async () => {
-
-          
+    const fetchData = async () => {          
       getProductDetail(params.id)
       .then((resultado)=>{
-          console.log(resultado)
+          setProducto(resultado[0])
       })
-            
-        try {
-            if (params.id) {
-                url += `?id=${params.id}`;
-            }
-            const filtro = doc(productsCollection, params.id)
-
-            console.log (params)
-            query
-            .then ((resultado)=>{
-        
-             const products = resultado.docs.map(doc =>{return doc.data() })
-             setProducto(products);
-             console.log (products)
-            })
-          .catch((error) => {
-        console.log(error)
-      })
-
-          
-    
-            
-            
-        } catch (error) {
-            console.error('Error fetching data:', error);
-        }
     };
 
     fetchData();
@@ -68,17 +40,13 @@ const ItemDetailContainer = ({}) => {
             </div>
             <h2 className="my-2 font-bold">{producto.nombre}</h2>
             <h2 className="my-2 font-bold">{"Precio: "+ producto.precio}</h2>
-            <h2 className="my-2 font-bold">{"Categoria: "+ producto.produto}</h2>
+            <h2 className="my-2 font-bold">{"Categoria: "+ producto.categoria}</h2>
             <ItemDetail></ItemDetail>
-            
             <Link to={`/`}>volver</Link>
       </div>
       <div className="container mx-auto h-40 mt-3">
-      
       </div>
-      
         </div>                
-     )
     </main>
   )
 }

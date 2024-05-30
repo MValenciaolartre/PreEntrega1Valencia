@@ -1,42 +1,23 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { Link } from "react-router-dom";
-import { app } from "../firebase";
-import { getFirestore , collection , getDocs } from "firebase/firestore";
-
-const db = getFirestore (app)
-
-const productsCollection = collection(db,"products")
-const query = getDocs(productsCollection)
+import { getAllProducts } from "../utils/utils";
 
 
 const ItemListContainer = ({ greeting }) => {
   const params = useParams()
   const [productos, setProductos] = useState([])
-  const baseUrl= "https://maidavalencia123.000webhostapp.com/"
   useEffect(() => {
-    const fetchData = async () => {
-      
-            let url = "https://maidavalencia123.000webhostapp.com/api.php";
-            
-          if (params.id) {
-                url += `?category=${params.id}`;
-                
-            }
-      
-      query
-      .then ((resultado)=>{
-  
-       const products = resultado.docs.map(doc =>{return doc.data() })
-       setProductos(products);
-       console.log (products)
+    const fetchData = () => {
+      getAllProducts()
+      .then((resultado)=>{
+        console.log(resultado)
+        setProductos(resultado)
       })
-    .catch((error) => {
-  console.log(error)
-})
-    };
+    }
 
     fetchData();
+    console.log(params.id)
 }, [params.id]);
   return (
   <main className="flex flex-wrap justify-center gap-8">
