@@ -3,7 +3,6 @@ import { createContext, useState } from "react";
 export const contexto = createContext();
 const Provider = contexto.Provider;
 
-
 function CarritoProvider(props) {
 
     const [cantCarrito, setCantCarrito] = useState(0)
