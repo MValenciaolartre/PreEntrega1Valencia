@@ -1,13 +1,17 @@
 
 import Contador from './ItemCount'
-
+import { useState, useEffect, useContext } from "react";
+import { contexto } from "../contexto";
 
 
 const ItemDetail = ({producto }) => {
-    //const valorActual = useContext(contexto)
+
+    const elValorDelContexto = useContext(contexto);  // Correct use of useContext
+  console.log(elValorDelContexto);
+    
 
     const handleConfirm = (numero) => {
-     //   valorActual.agregarAlCarrito(numero, productO)
+        elValorDelContexto.agregarAlCarrito(numero, producto)
     }
 
 

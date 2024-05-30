@@ -6,8 +6,7 @@ import { contexto } from "../contexto";
 
 const NavBar = () => { 
   const elValorDelContexto = useContext(contexto);  // Correct use of useContext
-  console.log(elValorDelContexto);
-
+  
   const params = useParams()
   const [categorias, setCategorias] = useState([])
   

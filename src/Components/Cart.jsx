@@ -1,17 +1,17 @@
-import { toast } from "react-toastify"
-import useCart from "../../hooks/useCart"
+
 import { createSale } from "../../utils"
+import { contexto } from "../contexto"
+import { useContext } from "react"
 
 function Carrito() {
 
-  const { carrito } = useCart()
-  
+  const elValorDelContexto = useContext(contexto); 
+  console.log(elValorDelContexto);
+  let carrito= elValorDelContexto.productosCarrito;
+
   const handleSubmit = (e) => {
     e.preventDefault()
-   /* toast.loading("Procesando compra...")
-    createSale()
-    toast.dismiss()
-    toast.success("Compra realizada con exito!")*/
+  
   }
 
   return (
