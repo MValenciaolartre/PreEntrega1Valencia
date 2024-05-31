@@ -17,8 +17,7 @@ function CarritoProvider(props) {
         copia.push(productoConCantidad)
         
         setCarrito(copia)
-        
-        // Calcular el nuevo precio total
+    
         const nuevoPrecioTotal = precioTotal + (cant * item.precio)
         setPrecioTotal(nuevoPrecioTotal)
         
@@ -52,5 +51,5 @@ function CarritoProvider(props) {
     );
 }
 
-export { contexto };  // Named export for contexto
-export default CarritoProvider;  // Default export for CarritoProvider
+export { contexto };  
+export default CarritoProvider;  

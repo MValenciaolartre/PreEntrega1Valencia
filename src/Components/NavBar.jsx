@@ -5,7 +5,7 @@ import { useState, useEffect, useContext } from "react";
 import { contexto } from "../contexto";
 
 const NavBar = () => { 
-  const elValorDelContexto = useContext(contexto);  // Correct use of useContext
+  const elValorDelContexto = useContext(contexto);  
   
   const params = useParams()
   const [categorias, setCategorias] = useState([])
@@ -55,7 +55,6 @@ const NavBar = () => {
 }
       </>
     
- 
   );
 };
 

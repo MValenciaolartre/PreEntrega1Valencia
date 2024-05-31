@@ -55,7 +55,7 @@ export const createVenta = async (productData, total) => {
     const productsCollection = collection(db, "ventas");
     const productWithTimestamp = {
       ...productData,
-      total, // Agrega el total al objeto
+      total, 
       createdAt: serverTimestamp(),
     };
 

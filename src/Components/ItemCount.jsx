@@ -23,14 +23,14 @@ function Contador(props) {
             <div className="flex gap-4 items-center">
                 <button 
                     onClick={incrementar} 
-                    className="p-4 text-white bg-gray-500 hover:bg-blue-700 rounded-full shadow-md"
+                    className="p-4 text-white bg-gray-500 hover:bg-gray-700 rounded-full shadow-md"
                 >
                     +
                 </button>
                 <p className="text-xl font-bold">{numero}</p>
                 <button 
                     onClick={decrementar} 
-                    className="p-4 text-white bg-gray-500 hover:bg-red-700 rounded-full shadow-md"
+                    className="p-4 text-white bg-gray-500 hover:bg-gray-700 rounded-full shadow-md"
                 >
                     -
                 </button>

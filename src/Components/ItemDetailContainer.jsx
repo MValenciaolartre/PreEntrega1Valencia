@@ -36,7 +36,10 @@ const ItemDetailContainer = ({}) => {
             <h2 className="my-2 font-bold">{"Categoria: "+ producto.categoria}</h2>
             <ItemDetail producto= {producto}  ></ItemDetail>
             
-            <Link to={`/`}>volver</Link>
+            <Link className="w-full bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-1 rounded focus:outline-none focus:shadow-outline" to={`/`}>Volver</Link>
+
+            
+
       </div>
       <div className="container mx-auto h-40 mt-3">
       </div>
@@ -46,4 +49,4 @@ const ItemDetailContainer = ({}) => {
 }
 
 export default ItemDetailContainer
-// aqui tenemos que poner un item
+
