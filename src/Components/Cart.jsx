@@ -12,20 +12,37 @@ const Cart = ({}) => {
   const [telefono, setTelefono] = useState('');
   const [email, setEmail] = useState('');
   const [email2, setEmail2] = useState('');
+ const  [IdVenta, setIdVenta] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault()
 
     if (nombre && telefono && email === email2) {
 
-    createVenta(productosProps, elValorDelContexto.total)
-    elValorDelContexto.vaciarCarrito()
+    let id= createVenta(productosProps, elValorDelContexto.total)
+    
     setNombre("")
     setEmail("")
     setTelefono("")
     setEmail("")
     setEmail2("")
+    
+    console.log (id)
 
+    createVenta(productosProps, elValorDelContexto.total)
+    .then((docId) => {
+      if (docId) {
+        setIdVenta(docId)
+        console.log("Venta creada con ID:", docId);
+      } else {
+        console.log("Hubo un error al crear la venta.");
+      }
+    })
+    .catch((error) => {
+      console.error("Error en la creación de la venta:", error);
+    });
+
+    elValorDelContexto.vaciarCarrito()
     }
     else{
 
@@ -49,6 +66,7 @@ const Cart = ({}) => {
       </div>
       <div><p className="text-2xl font-bold text-gray-700"> Precio total:{elValorDelContexto.total}</p></div>
       
+      <div><p className="text-2xl font-bold text-gray-700"> Identificador de venta:{IdVenta}</p></div>
 
       <form onSubmit={handleSubmit} className="max-w-lg mx-auto p-6 bg-white shadow-lg rounded-lg border-2 border-gray-300">
       <div className="mb-4">
