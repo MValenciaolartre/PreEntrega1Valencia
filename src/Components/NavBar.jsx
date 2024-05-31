@@ -41,12 +41,13 @@ const NavBar = () => {
               <div class="hidden md:flex space-x-4">
                 <a href="#" class="hover:bg-gray-700 p-2 rounded px-3 py-2 rounded-md bg-sky-500 text-white cursor-pointer">Inicio</a>
                 <a href="#" class="hover:bg-gray-700 p-2 rounded px-3 py-2 rounded-md bg-sky-500 text-white cursor-pointer">Acerca De</a>
+                <Link className="hover:bg-gray-700 p-2 rounded px-3 py-2 rounded-md bg-sky-500 text-white cursor-pointer" to={`/carrito`}>mi carrito</Link>
                 {categorias.map((categoria) => (
                         
                    <Link key={categoria.nombre} className="hover:bg-gray-700 p-2 rounded px-3 py-2 rounded-md bg-sky-500 text-white cursor-pointer" to={`/category/${categoria.nombre}`}>{categoria.nombre}</Link>
                     ))}
               
-              <CartWidget total={elValorDelContexto.carrito} link={'#'}/>
+                 <CartWidget total={elValorDelContexto.carrito} link to={'/carrito'}/>
               </div>
             </div>
           </div>

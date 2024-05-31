@@ -49,20 +49,21 @@ export const getProductDetail = async (id) => {
 }
 
 
-export const createVenta = async (productData) => {
-    try {
-      const db = getFirestore(app);
-      const productsCollection = collection(db, "ventas");
-      const productWithTimestamp = {
-        ...productData,
-        createdAt: serverTimestamp(),
-      };
-  
-      const docRef = await addDoc(productsCollection, productWithTimestamp);
-      console.log("Document written with ID: ", docRef.id);
-      return docRef.id;
-    } catch (error) {
-      console.error("Error adding document: ", error);
-      return null;
-    }
-  };
+export const createVenta = async (productData, total) => {
+  try {
+    const db = getFirestore(app);
+    const productsCollection = collection(db, "ventas");
+    const productWithTimestamp = {
+      ...productData,
+      total, // Agrega el total al objeto
+      createdAt: serverTimestamp(),
+    };
+
+    const docRef = await addDoc(productsCollection, productWithTimestamp);
+    console.log("Document written with ID: ", docRef.id);
+    return docRef.id;
+  } catch (error) {
+    console.error("Error adding document: ", error);
+    return null;
+  }
+};

@@ -40,6 +40,7 @@ function CarritoProvider(props) {
         <Provider value={{
         carrito: cantCarrito, 
         productosCarrito: carrito,
+        total:precioTotal,
         agregarAlCarrito: agregarAlCarrito,
         borrarDelCarrito: borrarDelCarrito,
 
