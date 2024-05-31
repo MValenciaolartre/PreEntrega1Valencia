@@ -33,6 +33,7 @@ function CarritoProvider(props) {
         console.log('vaciar')
         setCantCarrito(0)
         setCarrito([])
+        setPrecioTotal(0)
     }
 
 

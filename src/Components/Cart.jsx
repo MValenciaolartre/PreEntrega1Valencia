@@ -19,6 +19,13 @@ const Cart = ({}) => {
     if (nombre && telefono && email === email2) {
 
     createVenta(productosProps, elValorDelContexto.total)
+    elValorDelContexto.vaciarCarrito()
+    setNombre("")
+    setEmail("")
+    setTelefono("")
+    setEmail("")
+    setEmail2("")
+
     }
     else{
 
