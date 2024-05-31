@@ -40,3 +40,9 @@ Este proyecto es una tienda en línea pequeña que permite a los usuarios navega
 - Node.js
 - npm o yarn
 
+## Despliegue
+
+Este proyecto está desplegado en [Vercel](https://vercel.com/).
+
+Puedes acceder a la página en el siguiente enlace: [pre-entrega1-valencia](https://pre-entrega1-valencia.vercel.app/)
+
