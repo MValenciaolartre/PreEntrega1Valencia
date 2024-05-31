@@ -32,9 +32,6 @@ Este proyecto es una tienda en línea pequeña que permite a los usuarios navega
   - Agregar productos al carrito.
   - Ver y modificar el contenido del carrito.
 
-- **Procesamiento de Pedidos**
-  - Ingreso de información de envío y pago.
-  - Confirmación de pedidos y notificación por correo electrónico.
 
 ## Instalación y Configuración
 
@@ -43,9 +40,3 @@ Este proyecto es una tienda en línea pequeña que permite a los usuarios navega
 - Node.js
 - npm o yarn
 
-### Pasos para la Instalación
-
-1. Clona este repositorio:
-   ```bash
-   git clone https://github.com/tu-usuario/tu-repositorio.git
-   cd tu-repositorio
